@@ -1,6 +1,13 @@
 package BackEnd.Main;
 
-public static void main {
+public class main
+{
+
+    public static void main(){
 
   
-};
+    }
+
+
+}
+
