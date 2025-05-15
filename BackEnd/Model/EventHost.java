@@ -1,3 +1,6 @@
-public class EventHost {
+package BackEnd.Model;
+
+public class EventHost 
+{
     
 }

@@ -1,3 +1,6 @@
-public class User {
+package BackEnd.Model;
+
+public class User 
+{
     
 }
