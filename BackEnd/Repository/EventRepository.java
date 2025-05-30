@@ -1,17 +1,20 @@
 package BackEnd.Repository;
 
 import BackEnd.Model.Event;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class EventRepository {
-    private List<Event> events = new ArrayList<>();
+    private Map<Long, Event> events = new HashMap<>();
 
     public void addEvent(Event event) {
-        events.add(event);
+        events.put(event.getId(), event);
+    }
+
+    public Event findById(Long id) {
+        return events.get(id);
     }
 
     public List<Event> getAllEvents() {
-        return events;
+        return new ArrayList<>(events.values());
     }
 }

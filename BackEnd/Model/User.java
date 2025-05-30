@@ -1,19 +1,17 @@
 package BackEnd.Model;
 
 public abstract class User {
-    protected String username;
-    protected String role;
+    private int id;
+    private String username;
+    private String email;
+    private String password;
 
-    public User(String username, String role) {
+    public User(Long id, String username, String email, String password) {
+        this.id = id;
         this.username = username;
-        this.role = role;
+        this.email = email;
+        this.password = password;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getRole() {
-        return role;
-    }
+    // Getters and setters
 }

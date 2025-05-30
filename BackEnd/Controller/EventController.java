@@ -1,22 +1,20 @@
 package BackEnd.Controller;
 
-import BackEnd.Model.Event;
+import BackEnd.Model.*;
 import BackEnd.Repository.EventRepository;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
 public class EventController {
-    private EventRepository repository;
+    private EventRepository eventRepository;
 
-    public EventController() {
-        this.repository = new EventRepository();
+    public EventController(EventRepository eventRepository) {
+        this.eventRepository = eventRepository;
     }
 
-    public void createEvent(String name, String date, String location) {
-        repository.addEvent(new Event(name, date, location));
-    }
-
-    public List<Event> getEvents() {
-        return repository.getAllEvents();
+    public void createEvent(Long id, String title, EventHost host) {
+        Event event = new Event(id, title, LocalDateTime.now().plusDays(1), host);
+        host.hostEvent(event);
+        eventRepository.addEvent(event);
     }
 }
