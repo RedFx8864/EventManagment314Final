@@ -12,7 +12,7 @@ public class EventController {
         this.eventRepository = eventRepository;
     }
 
-    public void createEvent(Long id, String title, EventHost host) {
+    public void createEvent(int id, String title, EventHost host) {
         Event event = new Event(id, title, LocalDateTime.now().plusDays(1), host);
         host.hostEvent(event);
         eventRepository.addEvent(event);

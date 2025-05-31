@@ -6,7 +6,7 @@ import java.util.List;
 public class Customer extends User {
     private List<Booking> bookings = new ArrayList<>();
 
-    public Customer(Long id, String username, String email, String password) {
+    public Customer(int id, String username, String email, String password) {
         super(id, username, email, password);
     }
 

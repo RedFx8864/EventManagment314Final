@@ -6,7 +6,7 @@ import java.util.List;
 public class EventHost extends User {
     private List<Event> hostedEvents = new ArrayList<>();
 
-    public EventHost(Long id, String username, String email, String password) {
+    public EventHost(int id, String username, String email, String password) {
         super(id, username, email, password);
     }
 

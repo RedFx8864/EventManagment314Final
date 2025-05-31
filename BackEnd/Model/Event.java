@@ -11,7 +11,7 @@ public class Event {
     private EventHost host;
     private List<Booking> bookings = new ArrayList<>();
 
-    public Event(Long id, String title, LocalDateTime dateTime, EventHost host) {
+    public Event(int id, String title, LocalDateTime dateTime, EventHost host) {
         this.id = id;
         this.title = title;
         this.dateTime = dateTime;
@@ -22,7 +22,7 @@ public class Event {
         bookings.add(booking);
     }
 
-    public int getid(int id) {this.id = id;}
+    public int getId(int id) {return this.id = id;}
 
     // Getters and setters
 }

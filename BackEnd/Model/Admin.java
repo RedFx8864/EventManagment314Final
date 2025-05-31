@@ -1,7 +1,7 @@
 package BackEnd.Model;
 
 public class Admin extends User {
-    public Admin(Long id, String username, String email, String password) {
+    public Admin(int id, String username, String email, String password) {
         super(id, username, email, password);
     }
 }

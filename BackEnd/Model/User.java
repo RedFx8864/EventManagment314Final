@@ -6,12 +6,13 @@ public abstract class User {
     private String email;
     private String password;
 
-    public User(Long id, String username, String email, String password) {
+    public User(int id, String username, String email, String password) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
     }
 
-    // Getters and setters
+     public int getId(int id) {return this.id = id;}
+
 }
